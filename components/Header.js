@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { Link } from 'react-router-dom';
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const toggleDropdown = () => setIsOpen(!isOpen);
@@ -24,8 +24,7 @@ const Header = () => {
                 />
                 {isOpen && (
                     <ul className="dropdown-menu">
-                        <li>Profile</li>
-                        <li>Settings</li>
+                        <li><Link to="/profile">Profile</Link></li>
                         <li>Logout</li>
                     </ul>
                 )}
